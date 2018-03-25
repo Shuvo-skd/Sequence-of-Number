@@ -1,0 +1,24 @@
+Number = int(input())
+str_lst = []
+
+while 0 < Number:
+    limit = int(input())
+    str_lst.append(input().split())
+    Number -= 1
+
+int_lst = [list(map(int, x)) for x in str_lst]
+
+for sub in int_lst:
+    if sub[0] != max(sub) and (sub[1] - sub[0]) == (sub[2] - sub[1]):
+        b = sub[1] - sub[0]
+        print(b + max(sub))
+    elif sub[0] != max(sub) and (sub[1]/sub[0])!=0:
+        k = sub[1]/sub[0]
+        l = max(sub)
+        print(k*l)
+    else :
+
+        sub.reverse()
+        x = sub[1] - sub[0]
+        c = min(sub)
+        print(c - x)
